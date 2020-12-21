@@ -9,6 +9,7 @@ export function useTVMaze() {
     const searchHandler = (text: string) => {
         Axios.get<Series[]>(`http://api.tvmaze.com/search/shows?q=${text}`)
             .then(res => setResult(res.data));
+        closeModal();
     };
 
     const itemClickHandler = (series: Series) => {

@@ -17,9 +17,9 @@ export const TVMazeSearch: React.FC<TVMazeSearchProps> = ({ search }) => {
         search(text);
     };
     return <div>
-        <form onSubmit={searchHandler}>
+        <form onKeyUp={searchHandler}>
             <input
-                type="text"
+                type="search"
                 placeholder="search TV series"
                 value={text}
                 onChange={onChangeHandler}
